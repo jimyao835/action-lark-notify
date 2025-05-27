@@ -172,6 +172,36 @@ export function getCardElements() {
       tag: "markdown",
       content: `**Message**\n${lastGitMessage}`,
     },
+    {
+      tag: "column_set",
+      flex_mode: "bisect",
+      background_style: "default",
+      horizontal_spacing: "default",
+      columns: [
+        {
+          tag: "column",
+          width: "weighted",
+          weight: 1,
+          elements: [
+            {
+              tag: "markdown",
+              content: `**安卓下载链接**\n[${process.env.ANDROID_VERSION}](${process.env.LARK_MESSAGE_ANDROID_URL})`
+            },
+          ],
+        },
+        {
+          tag: "column",
+          width: "weighted",
+          weight: 1,
+          elements: [
+            {
+              tag: "markdown",
+              content: `**iOS下载链接**\n[${process.env.IOS_VERSION}](${process.env.LARK_MESSAGE_IOS_URL})`
+            },
+          ],
+        }
+      ]
+    }
   ];
 }
 
