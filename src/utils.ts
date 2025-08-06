@@ -185,23 +185,12 @@ export function getCardElements() {
           elements: [
             {
               tag: "markdown",
-              content: `**安卓下载链接**\n[${process.env.ANDROID_VERSION}](${process.env.LARK_MESSAGE_ANDROID_URL})`
+              content: `**安卓下载链接**\n[${process.env.ANDROID_VERSION}](${process.env.LARK_MESSAGE_ANDROID_URL})`,
             },
           ],
         },
-        {
-          tag: "column",
-          width: "weighted",
-          weight: 1,
-          elements: [
-            {
-              tag: "markdown",
-              content: `**iOS下载链接**\n[${process.env.IOS_VERSION}](${process.env.LARK_MESSAGE_IOS_URL})`
-            },
-          ],
-        }
-      ]
-    }
+      ],
+    },
   ];
 }
 
