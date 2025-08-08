@@ -73,7 +73,8 @@ export function getCardElements() {
       }`,
     );
   }
-  const lastGitMessage = result.stdout.trim();
+  const lastGitMessage =
+    process.env.GITHUB_COMMIT_MESSGE || result.stdout.trim();
 
   return [
     {

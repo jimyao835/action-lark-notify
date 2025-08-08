@@ -34932,7 +34932,7 @@ function getCardElements() {
     if (result.code !== 0) {
         core.setFailed(`Cannot get Git information. Have you setup the action correctly? ${(_a = result.stderr) !== null && _a !== void 0 ? _a : result.stdout}`);
     }
-    const lastGitMessage = result.stdout.trim();
+    const lastGitMessage = process.env.GITHUB_COMMIT_MESSGE || result.stdout.trim();
     return [
         {
             tag: "column_set",
@@ -35041,12 +35041,12 @@ function getCardElements() {
                     elements: [
                         {
                             tag: "markdown",
-                            content: `**安卓下载链接**\n[${process.env.ANDROID_VERSION}](${process.env.LARK_MESSAGE_ANDROID_URL})`
+                            content: `**安卓下载链接**\n[${process.env.ANDROID_VERSION}](${process.env.LARK_MESSAGE_ANDROID_URL})`,
                         },
                     ],
-                }
-            ]
-        }
+                },
+            ],
+        },
     ];
 }
 function getCardConfig() {
