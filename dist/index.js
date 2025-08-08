@@ -35045,6 +35045,17 @@ function getCardElements() {
                         },
                     ],
                 },
+                {
+                    tag: "column",
+                    width: "weighted",
+                    weight: 1,
+                    elements: [
+                        {
+                            tag: "markdown",
+                            content: `**iOS下载链接**\n[${process.env.IOS_VERSION}](${process.env.LARK_MESSAGE_IOS_URL})`,
+                        },
+                    ],
+                },
             ],
         },
     ];
